@@ -1,0 +1,9 @@
+<div *ngFor="let item of items; let i=index">
+    <!-- dichiaro che 'i' è il valore del numero di indece dell'array -->
+    <div>type : {{item.type}}</div>
+    <div>name : {{item.name}}</div>
+    <div>age : {{item.age}}</div>
+    <div *ngIf="i!=items.length-1">---------</div>
+    <!-- creo un if -->
+</div>
+<!-- crea un ciclo for, per ogni elementi contenuti in items. quindi crea un div per ogni elemento in {{items}} -->
