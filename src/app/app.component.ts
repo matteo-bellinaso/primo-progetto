@@ -11,6 +11,7 @@ export class AppComponent {
   title: string ; //= 'first angular app'; serve per cambiare una componente dichiarata, in questo  caso il title, dichiarare sempre il tipo di variabile
   items: Characters[] = []; //in questo modo gli dichiaro che può essere un array di stringhe o numeri.
   value : string;
+  CharacterSelected: Characters;// variabile legata al nostro HTML
   
   constructor(private ListService: ListService){
     this.title = 'hello first app';
@@ -25,5 +26,11 @@ showValue(){
 }
 
 
+showChar(item:Characters){ // creo metodo che prende l'oggetto che è stato cliccato da selectItem
+
+this.CharacterSelected = item;
+
+
 }
 
+}

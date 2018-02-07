@@ -1,4 +1,4 @@
-<div *ngFor="let item of items; let i=index">
+<div *ngFor="let item of items; let i=index" (click)="selectItem(item)">
     <!-- dichiaro che 'i' è il valore del numero di indece dell'array -->
     <div>type : {{item.type}}</div>
     <div>name : {{item.name}}</div>
