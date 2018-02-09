@@ -21,6 +21,7 @@ export class ListComponent {
       this.itemSelectedChange.emit(item);
     }
 
+
 }
 
 

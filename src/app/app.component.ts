@@ -26,11 +26,13 @@ showValue(){
 }
 
 
-showChar(item:Characters){ // creo metodo che prende l'oggetto che è stato cliccato da selectItem
+showChar(item: Characters){ // creo metodo che prende l'oggetto che è stato cliccato da selectItem 
 
 this.CharacterSelected = item;
 
-
 }
+
+
+
 
 }
