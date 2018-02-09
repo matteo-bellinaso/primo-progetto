@@ -7,17 +7,10 @@
 </div>
 
 
-<list [items]="items" (itemSelectedChange)="showChar($event)"></list>
+<list [items]="items"></list>
 
 <input [(ngModel)]="value">
 
 <div (click)="showValue()" class="button">Mostra Valore</div>
 
-<div *ngIf="CharacterSelected">
-    <!-- se c'è un carattereSelezionato lo mostra -->
-    Selezionato:
-
-    <div>type : {{CharacterSelected?.type}}</div>
-    <div>name : {{CharacterSelected?.name}}</div>
-    <div>age : {{CharacterSelected?.age}}</div>
-</div>
+<detail></detail>

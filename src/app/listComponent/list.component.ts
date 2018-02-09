@@ -1,5 +1,6 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Characters } from '../charachters';
+import { ComunicatorService } from '../comunicator.service';
 
 
 
@@ -12,15 +13,24 @@ export class ListComponent {
     @Input()
     items : Characters[];
 
+    //@Output()
 
-    @Output()
-    itemSelectedChange = new EventEmitter<Characters>();
+    //itemSelectedChange = new EventEmitter<Characters>();
 
-    selectItem(item: Characters){  // creo metodo che restituisce oggetto cliccato.
+    constructor(private comunicatorService : ComunicatorService ){
 
-      this.itemSelectedChange.emit(item);
+
     }
 
+    ngOnInit(){
+      this.items.push(new Characters());
+    }
+
+    selectItem(item: Characters){   //al click di un elemento della lista parte la funzione selectitem
+
+      this.comunicatorService.changeSubject(item);
+    
+    }
 
 }
 
