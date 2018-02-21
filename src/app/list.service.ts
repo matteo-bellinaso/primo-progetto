@@ -1,7 +1,9 @@
 import { Characters } from "./charachters";
+import { Subject } from "rxjs/Subject";
 
 export class ListService{
 
+  [x: string]: any;
     getCharactersList() : Characters[] {
 
         let items: Characters[] = [];
@@ -13,6 +15,17 @@ export class ListService{
 
         return items;
     }
+    
+
+    
+        private sectionSelected: Subject<string> = new Subject<string>();
+    
+        public sectionSelected$ = this.sectionSelected.asObservable();
+    
+        public setSelection(id : string){
+            this.sectionSelected.next(id);
+        }
+    
     
 
 }

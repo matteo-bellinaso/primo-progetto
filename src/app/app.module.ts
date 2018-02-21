@@ -7,12 +7,15 @@ import { ListComponent } from './listComponent/list.component';
 import { ListService } from './list.service';
 import { DetailComponent } from './detailComponent/detail.component';
 import { ComunicatorService } from './comunicator.service';
+import { AfterViewComponent } from './after-view/after-view.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 // devo importare tutti i componenti
 
 @NgModule({
   declarations: [
     AppComponent, // in questa zona va dichiarato ogni tipo di componente che viene aggiunto
-    ListComponent, DetailComponent // nel nostro caso la lista1
+    ListComponent, DetailComponent, AfterViewComponent, NavbarComponent, HomeComponent // nel nostro caso la lista1
   ],
   imports: [ // qui ci vogliono tutti i vari import dei moduli
     BrowserModule,
