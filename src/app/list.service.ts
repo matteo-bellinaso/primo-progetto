@@ -3,21 +3,34 @@ import { Subject } from "rxjs/Subject";
 
 export class ListService{
 
-  [x: string]: any;
-    getCharactersList() : Characters[] {
 
-        let items: Characters[] = [];
+private items : Characters[] = [
 
-        items.push(new Characters("", "", 30));
-        items.push(new Characters("Manga"));
-        items.push(new Characters("Disney","pluto"));
-        items.push(new Characters("Disney","pippo",30));
+    new Characters(0,"", "", 30),
+    new Characters(1,"Manga"),
+   new Characters(2,"Disney","pluto"),
+    new Characters(3,"Disney","pippo",30)
 
-        return items;
+]
+
+
+
+    getCharactersList(){
+
+        return this.items;
     }
     
 
-    
+    getCharactersById(id: number){
+        for(let char of this.items){
+            if(char.id == id){
+                return char;
+            }
+        }
+        return null;
+    }
+
+
         private sectionSelected: Subject<string> = new Subject<string>();
     
         public sectionSelected$ = this.sectionSelected.asObservable();

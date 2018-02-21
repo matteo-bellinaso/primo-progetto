@@ -16,7 +16,11 @@ export class AppComponent {
   currentSection : string;
 
 
-  constructor(private ListService: ListService){
+  constructor(){
+    
+  }
+
+   /* constructor(private ListService: ListService){
     this.title = 'hello first app';
     
     this.items = this.ListService.getCharactersList();
@@ -30,7 +34,7 @@ export class AppComponent {
   showValue(){
 
   alert(this.value);
-  }
+  } */
 
  
 

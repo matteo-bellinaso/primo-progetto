@@ -1,6 +1,8 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Characters } from '../charachters';
 import { ComunicatorService } from '../comunicator.service';
+import { ListService } from '../list.service';
+import { Router} from '@angular/router';
 
 
 
@@ -9,26 +11,28 @@ import { ComunicatorService } from '../comunicator.service';
   templateUrl: './list.component.html' // indica il percorso dove andare a prendere il template in html
   
 })
+
 export class ListComponent {
-    @Input()
+
     items : Characters[];
 
     //@Output()
 
     //itemSelectedChange = new EventEmitter<Characters>();
 
-    constructor(private comunicatorService : ComunicatorService ){
+    constructor(private listService : ListService , private router : Router){
 
 
     }
 
     ngOnInit(){
-      this.items.push(new Characters());
+      //this.items.push(new Characters());
+      this.items = this.listService.getCharactersList();
     }
 
     selectItem(item: Characters){   //al click di un elemento della lista parte la funzione selectitem
 
-      this.comunicatorService.changeSubject(item);
+      this.router.navigate(['/detail/'+item.id]);
     
     }
 

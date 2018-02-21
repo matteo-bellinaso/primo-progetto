@@ -5,8 +5,13 @@
     color: white;
 }
 
-#navbar a {
+#navbar div {
     float: right;
     margin-right: 20px;
     line-height: 80px;
+    color: white;
+}
+
+.selected {
+    background-color: cadetblue;
 }

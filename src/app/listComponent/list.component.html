@@ -1,4 +1,5 @@
 <div *ngFor="let item of items; let i=index" (click)="selectItem(item)">
+    <!-- <div routerLink="/detail/{{item.id}}" routerLinkActive="selected">home</div> -->
     <!-- dichiaro che 'i' è il valore del numero di indece dell'array -->
     <div>type : {{item.type}}</div>
     <div>name : {{item.name}}</div>
