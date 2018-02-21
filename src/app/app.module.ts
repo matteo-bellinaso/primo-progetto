@@ -10,6 +10,7 @@ import { ComunicatorService } from './comunicator.service';
 import { AfterViewComponent } from './after-view/after-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { demoRouter } from './router/router.module';
 // devo importare tutti i componenti
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
   imports: [ // qui ci vogliono tutti i vari import dei moduli
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    demoRouter
   ],
   providers: [ListService, ComunicatorService],
   bootstrap: [AppComponent]
