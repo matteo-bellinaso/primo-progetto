@@ -8,7 +8,7 @@ export class HighlightDirective {
 
   constructor(private elem : ElementRef) { }
 
-@Input() highLightColor : string;
+@Input('appHighlight') highLightColor : string;
 
   setBackGround(color : string = null){
     this.elem.nativeElement.style.backgroundColor = color;
