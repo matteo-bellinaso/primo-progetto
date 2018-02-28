@@ -12,12 +12,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { demoRouter } from './router/router.module';
 import { HighlightDirective } from './highlight.directive';
+import { AtoForPipe } from './ato-for.pipe';
 // devo importare tutti i componenti
 
 @NgModule({
   declarations: [
     AppComponent, // in questa zona va dichiarato ogni tipo di componente che viene aggiunto
-    ListComponent, DetailComponent, AfterViewComponent, NavbarComponent, HomeComponent, HighlightDirective // nel nostro caso la lista1
+    ListComponent, DetailComponent, AfterViewComponent, NavbarComponent, HomeComponent, HighlightDirective, AtoForPipe // nel nostro caso la lista1
   ],
   imports: [ // qui ci vogliono tutti i vari import dei moduli
     BrowserModule,
