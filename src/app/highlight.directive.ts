@@ -10,13 +10,15 @@ export class HighlightDirective {
 
 @Input('appHighlight') highLightColor : string;
 
+@Input() defaultColor : string;
+
   setBackGround(color : string = null){
     this.elem.nativeElement.style.backgroundColor = color;
 
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.setBackGround(this.highLightColor);
+    this.setBackGround(this.highLightColor ? this.highLightColor: this.defaultColor );
   }
 
   @HostListener('mouseleave') onMouseLeave() {
