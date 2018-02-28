@@ -21,6 +21,10 @@ private items : Characters[] = [
     }
     
 
+    //ciclo che controlla l'id passato, 
+    //se c'è un oggetto nell'array che ha un id uguale a quallo passto
+    //ritorna l'oggetto corrente
+    
     getCharactersById(id: number){
         for(let char of this.items){
             if(char.id == id){

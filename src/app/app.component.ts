@@ -31,10 +31,11 @@ export class AppComponent {
     this.ListService.sectionSelected$.subscribe(id =>{this.currentSection = id});
     
   }
+  */
   showValue(){
 
   alert(this.value);
-  } */
+  } 
 
  
 

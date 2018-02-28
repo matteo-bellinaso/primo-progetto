@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
 
   ]
 
-  selectSection(id: string){
+  /*selectSection(id: string){
     this.menuItems.forEach(item => {
       if(id == item.id){
         item.selected = true;
@@ -31,6 +31,6 @@ export class NavbarComponent implements OnInit {
       }
     });
     this.listService.setSelection(id);
-  }
+  }*/
 
 }

@@ -32,7 +32,9 @@ export class ListComponent {
 
     selectItem(item: Characters){   //al click di un elemento della lista parte la funzione selectitem
 
-      this.router.navigate(['/detail/'+item.id]);
+      this.router.navigate(['/detail/'+item.id]); 
+      //usando router.navigate usiamo la funzione di navigazione. 
+      //che ci rimanda alla pagina di dettaglio+id dell'oggetto selezionato
     
     }
 

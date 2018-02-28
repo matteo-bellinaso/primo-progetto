@@ -28,7 +28,8 @@ export class DetailComponent  {
   constructor(private router : ActivatedRoute , private listService : ListService){
     this.router.params.subscribe(params =>{
       //params è il parametro per andare a prendere l'id passato nell'url da list component
-      if(params['id'] != '' && params['id'] != null ){
+
+      if(params['id'] != '' && params['id'] != null ){ //controlla che il parametro passato non sia nullo o vuoto.
         this.CharacterSelected = this.listService.getCharactersById(params['id']);
       }
     });
