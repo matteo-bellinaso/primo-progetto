@@ -13,4 +13,8 @@ export class HomeComponent implements OnInit {
   }
 
   color : string = 'orange';
+
+
+
+  evilDad: boolean = false;
 }
