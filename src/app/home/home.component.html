@@ -5,7 +5,7 @@
     <br>
 </p>
 
-<div appHighlight [defaultColor]="'red'"> {{ 'AIUTOOOOO mio padre' | atoFor }}
+<div appHighlight [defaultColor]="'red'"> {{ 'AIUTOOOOO mio padre' | atoLetter:3 | uppercase }}
     <ng-container *ngIf="evilDad">è cattivo </ng-container> quindi non mi compra.
 </div>
 <br> <br><br><br>

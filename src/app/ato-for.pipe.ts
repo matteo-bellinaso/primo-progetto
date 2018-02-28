@@ -1,14 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'atoFor'
+  name: 'atoLetter'
 })
-export class AtoForPipe implements PipeTransform {
+export class AtoLetterPipe implements PipeTransform {
 
-  transform(value: any): any {
+  transform(value: any, args : string): any {
 
-    return value.replace('A','4');
-    
+    return value.replace('A',args);
+
   }
 
 }
